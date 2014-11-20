@@ -40,6 +40,12 @@ makeCacheMatrix <- function(x = matrix()) {
   get <- function() x
   setinverse <- function(solve) m <<- solve
   getinverse <- function() m
+## set will assign the value of the matrix passed
+## get will get the value of the matrix passed
+## setinverse will execute the  'solve'function
+## which in fact calculates the inverse
+## no error handling as mentioned in the assigment
+## and getinverse will return the cached value
   list(set = set, get = get,
        setinverse = setinverse,
        getinverse = getinverse)
